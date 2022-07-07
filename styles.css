@@ -29,7 +29,7 @@
     align-items: center;
 }
 
-.num-btn, .op-btn, .clr-btn {
+button {
     box-sizing: border-box;
     flex: 1 1 auto;
     height: 100px;
@@ -43,5 +43,10 @@
 
 .clr-btn {
     background-color: lightcoral;
+    color: white;
+}
+
+.eq-btn {
+    background-color: darkseagreen;
     color: white;
 }

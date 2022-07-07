@@ -54,3 +54,25 @@ clearButton.addEventListener('click', () => {
     screen.textContent = displayValue;
 })
 
+let value1 = 0;
+let value2 = 0;
+let op = '';
+
+const opBtns = document.querySelectorAll('.op-btn');
+
+opBtns.forEach((item) => {
+    item.addEventListener('click', () => {
+        value1 = Number(displayValue);
+        op = item.id; 
+        displayValue = '0'
+        screen.textContent = displayValue;
+    })
+})
+
+const eq = document.querySelector('.eq-btn')
+
+eq.addEventListener('click', () => {
+    value2 = Number(displayValue)
+    displayValue = operate(op, value1, value2);
+    screen.textContent = displayValue;
+})
