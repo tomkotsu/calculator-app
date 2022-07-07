@@ -25,3 +25,32 @@ const operate = function (operator, x, y) {
         return divide(x, y);
     };
 };
+
+let displayValue = '0';
+
+const screen = document.querySelector('.screen');
+
+const inputNum = function (num) {
+    if (displayValue === '0') {
+        displayValue = num;
+    } else {
+        displayValue += num;
+    };
+};
+
+const numButtons = document.querySelectorAll('.num-btn');
+
+numButtons.forEach((item) => {
+    item.addEventListener('click', () => {
+        inputNum(item.id);
+        screen.textContent = displayValue;
+    });
+});
+
+const clearButton = document.querySelector('.clr-btn')
+
+clearButton.addEventListener('click', () => {
+    displayValue = '0';
+    screen.textContent = displayValue;
+})
+
