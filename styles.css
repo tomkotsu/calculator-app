@@ -1,0 +1,41 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('https://fonts.googleapis.com/css?family=Orbitron');
+   }
+
+.screen {
+    border: 2px solid black;
+    margin: auto;
+    background-color: darkseagreen;
+    color:crimson;
+    width: 400px;
+    height: 100px;
+    box-sizing: border-box;
+    font-family: 'digital-clock-font', sans-serif;
+    font-size: 50px;
+    text-align: right;
+    padding-top: 40px;
+}
+
+.num-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    height: 400px;
+    width:  400px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.num-btn, .op-btn {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    height: 100px;
+    width: 100px;
+}
+
+.op-btn {
+    background-color: coral;
+    color: white;
+}
